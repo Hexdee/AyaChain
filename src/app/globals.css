@@ -1,27 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.ended {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.custom-file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.file-input {
+  display: none;
+}
+
+/* Define the animation keyframes */
+@keyframes beep {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Animation to the get started button */
+.beep {
+  width: 16px;
+  height: 16px;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  animation: beep 1s infinite;
+  border-radius: 50%;
+  border: 2px solid #5ECC8B;
 }
