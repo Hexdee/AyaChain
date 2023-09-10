@@ -81,7 +81,7 @@ html, body {
   }
 }
 
-/* Animation to the get started button */
+/* Apply the animation to the div */
 .beep {
   width: 16px;
   height: 16px;
@@ -89,7 +89,7 @@ html, body {
   position: absolute;
   top: 3px;
   right: 3px;
-  animation: beep 1s infinite;
+  animation: beep 1s infinite; /* Adjust the duration as needed */
   border-radius: 50%;
   border: 2px solid #5ECC8B;
 }
