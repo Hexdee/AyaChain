@@ -13,13 +13,32 @@ const Account: React.FC = () => {
         <div className='flex flex-col gap-16 p-8'>
             <div>
                 {address ? (
-                    <div className='flex gap-3 flex-col font-bold'>
-                        <h1 className='text-md'>
-                            Wallet Connected: {address}
-                        </h1>
-                        <h1 className='text-md'>
-                            {data && `Wallet Balance: ${data.formatted} ${data.symbol}`}
-                        </h1>
+                    <div className='flex gap-3 bg-white'>
+                        <div className='walletBalance font-bold text-white'>
+                            {data && 
+                            <div className='center flex-col gap-4'>
+                                <p>
+                                    Wallet Balance
+                                </p>
+                                <p className='text-md'>
+                                    {data.formatted.slice(0, 8)} {data.symbol}
+                                </p>
+                            </div>
+                            }
+                        </div>
+                        <div className='ml-10 my-auto font-medium flex-col flex gap-4'>
+                            <p className='w-[75%]'>
+                                Check your wallet balance and copy your wallet address here
+                            </p>
+                            <div className='text-[.9rem] flex gap-2 p-2 bg-[#F1F6FF] '>
+                                <div>
+                                    Connected Wallet Address: {address}
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ) : (
                     <div>

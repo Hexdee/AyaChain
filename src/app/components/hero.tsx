@@ -26,9 +26,9 @@ const Hero: React.FC = () => {
                 </CustomButton>
             </div>
             <h1 className="font-bold grotesk lg:text-xxxl md:text-xxl text-[30px] lg:leading-[120%] leading-tight text-center xl:w-[80%] w-[95%]">
-                Make your business stronger with authenticity and transparency
+                Advance Transparency in Your Business with Blockchain
             </h1>
-            <p className="lg:leading-[32px] md:text-md text-[14px] text-darkGray xl:w-[65%] w-[80%] text-center">
+            <p className="lg:leading-[32px] md:text-[20px] text-[14px] text-darkGray xl:w-[65%] w-[60%] text-center">
                 Stop Fake Products and Choose Ethical Sourcing with Blockchain. Build Strong Trust in the Supply Chain.
             </p>
             <div className="center gap-3">
