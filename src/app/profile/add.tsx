@@ -6,6 +6,7 @@ import { Address, useAccount } from 'wagmi';
 import ImagePreview from './common/ImagePreview';
 import { useProductContext } from '../context/productContext';
 import { toast } from 'react-toastify';
+import LoadingButton from './common/addProduct';
 
 const Add: React.FC = () => {
     const [selectedImageFile, setSelectedImageFile] = useState<File | null>(null);
@@ -92,7 +93,19 @@ const Add: React.FC = () => {
         setImageName(null);
         setImageSize(null);
     
-        setSelectedImageFile(null); // Optionally, you can clear the selected image file as well
+        setSelectedImageFile(null);
+    };
+
+    // a function to check if all input fields are empty
+    const areInputFieldsEmpty = () => {
+        return (
+            !((document.getElementById('name') as HTMLInputElement)?.value) &&
+            !((document.getElementById('your-location') as HTMLInputElement)?.value) &&
+            !((document.getElementById('receivers-address') as HTMLInputElement)?.value) &&
+            !((document.getElementById('receivers-location') as HTMLInputElement)?.value) &&
+            !((document.getElementById('intermediarys-wallet') as HTMLInputElement)?.value) &&
+            !((document.getElementById('intermediarys-location') as HTMLInputElement)?.value)
+        );
     };
     
 
@@ -249,16 +262,22 @@ const Add: React.FC = () => {
                             </div>
                         </div>
                         <div className='flex flex-col gap-1 my-6'>
-                        <CustomButton
+                            <button
+                                className={`${
+                                    areInputFieldsEmpty()
+                                        ? 'bg-[#B9D5FE] cursor-not-allowed'
+                                        : 'bg-[#2F7AEA] cursor-pointer hover:scale-95 transition duration-300'
+                                } text-[#FFFFFF] p-[1rem] rounded-lg center relative`}
                                 onClick={handleDeploy}
-                                background='#2F7AEA'
-                                textColor='#FFFFFF'
-                                padding='1rem'
-                                borderRadius='12px'
                                 disabled={isUploading || isDeploying}
                             >
-                                {isUploading ? 'Uploading Image' : (isDeploying ? 'Adding product...' : 'Add product')}
-                            </CustomButton>
+                                {isDeploying ? (
+                                    <LoadingButton />
+                                ) : (
+                                    isUploading ? 'Uploading Image' : 'Add product'
+                                )}
+                            </button>
+
                         </div>
                     </div>
                 </div> : 

@@ -27,15 +27,12 @@ const Account: React.FC = () => {
                             }
                         </div>
                         <div className='ml-10 my-auto font-medium flex-col flex gap-4'>
-                            <p className='w-[75%]'>
+                            <p className=''>
                                 Check your wallet balance and copy your wallet address here
                             </p>
                             <div className='text-[.9rem] flex gap-2 p-2 bg-[#F1F6FF] '>
                                 <div>
                                     Connected Wallet Address: {address}
-                                </div>
-                                <div>
-
                                 </div>
                             </div>
                         </div>
