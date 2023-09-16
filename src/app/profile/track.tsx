@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAccount, useBalance } from 'wagmi';
 import CustomButton from '../components/common/button';
 import { IProductHistory, useProductContext } from '../context/productContext';
 import { ProductInfo } from '../context/productContext';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
 
 
 const Track: React.FC = () => {
@@ -119,7 +117,7 @@ const Track: React.FC = () => {
                             {productDetails && trackedProducts.length > 0 && (
                                 <div className="absolute w-full h-full top-0 my-10 bg-white border border-[#0000001A] mb-20 rounded-[12px] center">
                                     {trackedProducts.map((product: ProductInfo, index: any) => (
-                                        <div key={index} className='w-full h-full flex justify-between p-4'>    
+                                        <div key={index} className='w-full h-full flex justify-between p-4'>
                                             <div className='w-[40%] flex-col flex text-[16px] gap-2'>
                                                 {product.productImage && (
                                                     <img 
@@ -146,10 +144,8 @@ const Track: React.FC = () => {
                                                     <p className='font-semibold'>{product.status}</p>
                                                 </div>
                                             </div>
-                                            <div className='w-[40%] bg-lightGray borde-[#0000001A] rounded-[12px] center flex-col p-2 '>
-                                                <div className='w-full h-[320px] map mb-10'>
-                                                    <img src="/icons/map.png" alt="map" className="w-full h-full bg-cover object-cover rounded-[12px]" />
-                                                </div>
+                                            <div className='w-[40%] bg-lightGray borde-[#0000001A] rounded-[12px] flex flex-col p-2'>
+                                                <h3 className='font-bold mb-6 mt-3 ml-3 text-[20px]'>Your Product History</h3>
                                                 {productHistory[0] &&
                                                     <div className='between w-full gap-3 mb-3' key={index}>
                                                         <img src="/svgs/tick.svg" alt="tick" />

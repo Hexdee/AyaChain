@@ -18,14 +18,14 @@ const Hero: React.FC = () => {
             backgroundBlendMode: "overlay, normal" 
         }}>
             <div className="">
-                <CustomButton onClick={handleBetaTest} textSize=".8rem" borderRadius="25px" border="1px solid rgba(0, 0, 0, 0.10)">
+                <div onClick={handleBetaTest} className='text-[.8rem] rounded-[25px] border border-gray  center p-[.8rem] gap-2 cursor-pointer hover:scale-95 duration-300'>
                     <p>
                         Join our Beta testers
                     </p>
                     <img src="/svgs/beta.svg" alt="b" />
-                </CustomButton>
+                </div>
             </div>
-            <h1 className="font-bold grotesk lg:text-xxxl md:text-xxl text-[30px] lg:leading-[120%] leading-tight text-center xl:w-[80%] w-[95%]">
+            <h1 className="font-bold grotesk lg:text-xxxl md:text-xxl text-[30px] lg:leading-[110%] leading-tight text-center xl:w-[80%] w-[95%]">
                 Advance Transparency in Your Business with Blockchain
             </h1>
             <p className="lg:leading-[32px] md:text-[20px] text-[14px] text-darkGray xl:w-[65%] w-[60%] text-center">

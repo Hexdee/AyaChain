@@ -20,7 +20,6 @@
     "encoding": "^0.1.13",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.17",
-    "leaflet": "^1.9.4",
     "lokijs": "^1.5.12",
     "mapbox-gl": "^2.15.0",
     "next": "13.4.17",
@@ -37,6 +36,8 @@
     "wagmi": "^1.3.10"
   },
   "devDependencies": {
-    "@types/mapbox-gl": "^2.7.13"
+    "@types/leaflet": "^1.9.4",
+    "@types/mapbox-gl": "^2.7.13",
+    "leaflet": "^1.9.4"
   }
 }

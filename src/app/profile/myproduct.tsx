@@ -125,9 +125,9 @@ const MyProduct: React.FC = () => {
                                         </div>
                                         </div>
                                         { product.status == "Created" ?
-                                            <CustomButton onClick={() => handleShipProduct(product)} background='#2F7AEA' textColor='#fff'>Ship product</CustomButton>
+                                            <CustomButton onClick={() => handleShipProduct(product)} background='#2F7AEA' borderRadius='8px' textColor='#fff'>Ship product</CustomButton>
                                             :
-                                            <CustomButton onClick={() => handleUpdateProduct(product)} background='#2F7AEA' textColor='#fff'>Update product</CustomButton>
+                                            <CustomButton onClick={() => handleUpdateProduct(product)} background='#2F7AEA' borderRadius='8px' textColor='#fff'>Update product</CustomButton>
                                         }
                                     </div>
                                 }
