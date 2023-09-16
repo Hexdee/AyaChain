@@ -199,7 +199,7 @@ const Track: React.FC = () => {
                                                             <div className="rounded-[6px] p-2 border border-[#0000001A] w-full flex-col flex">
                                                                 <div className='text-[18px] font-semibold flex justify-between'>
                                                                     <p>
-                                                                        Transferred
+                                                                        Current Location
                                                                     </p>
                                                                     <p className='text-[14px]'>
                                                                         {_product.time}
