@@ -5,28 +5,28 @@ import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { Chain, configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const pegoTestnet = {
-  id: 123_456,
-  name: 'PEGO',
-  network: 'pegochain',
+export const calibrationnet = {
+  id: 314_159,
+  name: 'Filecoin - Calibration testnet',
+  network: 'calibrationnet',
   nativeCurrency: {
     decimals: 18,
-    name: 'Pego Test Token',
-    symbol: 'PG',
+    name: 'Filecoin testnet token',
+    symbol: 'tFIL',
   },
   rpcUrls: {
-    public: { http: ['https://rpc.pegotest.net/'] },
-    default: { http: ['https://rpc.pegotest.net/'] },
+    public: { http: ['https://api.calibration.node.glif.io/rpc/v1', 'https://filecoin-calibration.chainup.net/rpc/v1', 'https://rpc.ankr.com/filecoin_testnet', 'https://filecoin-calibration.chainup.net/rpc/v1', 'https://api.calibration.node.glif.io/rpc/v1'] },
+    default: { http: ['https://api.calibration.node.glif.io/rpc/v1', 'https://filecoin-calibration.chainup.net/rpc/v1', 'https://rpc.ankr.com/filecoin_testnet', 'https://filecoin-calibration.chainup.net/rpc/v1', 'https://api.calibration.node.glif.io/rpc/v1'] },
   },
   blockExplorers: {
-    etherscan: { name: 'PegoTestScan', url: 'https://scan.pegotest.net/' },
-    default: { name: 'PegoTestScan', url: 'https://scan.pegotest.net/' },
+    etherscan: { name: 'FilScan', url: 'https://calibration.filscan.io' },
+    default: { name: 'FilScan', url: 'https://calibration.filscan.io' },
   },
 } as const satisfies Chain
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
-    pegoTestnet,
+    calibrationnet,
   ],
   [publicProvider()]
 );
