@@ -144,13 +144,15 @@ export const UpdateModal = ( { product, modalType, onClose}: { product: IProduct
         }      
     };
   return (
-    <div className='modal' onClick={onClose}>
+    <div className='modal'>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <div className="heading flex justify-between">
+        <div className="between leading-none">
         <p className='text-[20px]'>
           {modalType.slice(0, 1).toUpperCase() + modalType.slice(1)} modal
         </p>
-        <p className='text-[26px] mx-[-5px] my-[-20px] cursor-pointer' onClick={onClose}>x</p>
+        <div className="p-2 rounded-full border w-[30px] h-[30px] center">
+          <p className='text-[20px] cursor-pointer' onClick={onClose}>x</p>
+        </div>
         </div>
         <div className='center flex-col overflow-x-hidden mt-6'>
           <div className='flex flex-wrap w-full gap-5 overflow-x-hidden rounded-[12px]'>
@@ -193,7 +195,7 @@ export const UpdateModal = ( { product, modalType, onClose}: { product: IProduct
             </div>
           </div>
         </div>
-        <div className='flex flex-col gap-1 my-6'>
+        <div className='flex flex-col gap-1 mt-4'>
             <button
                 className={`${
                     areInputFieldsEmpty()
