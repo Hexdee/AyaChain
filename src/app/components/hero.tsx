@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                         <div className='beep'></div>
                     </CustomButton>
                 </Link>
-                <a href='https://youtu.be/zEJmsMtHUPw' target='_blank'>
+                <a href='https://youtu.be/_LqzlMXBSEc?si=Pcqt83_oU7c-6ltt' target='_blank'>
                     <CustomButton onClick={() => {}}>
                         <div className="center">
                             <Image src="/images/watch.png" alt="watch" width={40} height={40} />
