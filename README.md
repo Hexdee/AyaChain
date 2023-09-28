@@ -10,6 +10,8 @@ This repository contains AyaChain project developed with Next.js, TypeScript, Ta
 
 [Smart contract](https://calibration.filscan.io/address/0x0D49a5Efe0058CC1D6E24b0b8C4527aDDaf4c0c8)
 
+Get token [here](https://faucet.calibration.fildev.network/funds.html) for testing
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
